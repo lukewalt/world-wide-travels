@@ -6,9 +6,21 @@
         <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
         <link rel="stylesheet" href="main.css">
     </head>
-    <body>
+    <body ng-app="world-wide-travels">
+        <h1>World Wide Travels</h1>
+
+        <div ng-controller="bookCtrl">
+            <ul>
+                <li ng-repeat="item in list">
+                    {{item.title}} :
+                    {{item.type}} : 
+                    {{item.price}}
+                </li>
+            </ul>
+        </div>
 
     </body>
-    <script type="text/javascript" src="app/controllers/bookCtrl.js"></script>
+    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
     <script type="text/javascript" src="app/app.js"></script>
+    <script type="text/javascript" src="app/controllers/bookCtrl.js"></script>
 </html>

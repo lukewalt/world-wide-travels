@@ -1,17 +1,12 @@
 app.factory('guideFactory', function($http){
 
-    function getGuides(){
-        //returns a promise to use resolve method
-        return new Promise(function(resolve, reject){
-            //calls for the data
+    return {
+        guideList: () => {
             return $http.get(`data/guides.json`)
-            
-            .then(function(json){
-                let parsedData = json.data.guides
-                resolve(parsedData)
+            .then(function(val){
+                console.log("DATA  ", val.data.guides);
+                return val.data.guides
             })
-        })
+        }
     }
-    //factory returns an object containing parsed and cleaned data
-    return {getGuides}
 })

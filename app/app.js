@@ -1,5 +1,5 @@
 
-var app = angular.module("world-wide-travels", [])
+var app = angular.module("world-wide-travels", ['ngRoute'])
 
 
 

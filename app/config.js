@@ -1,5 +1,5 @@
 app.config(function($routeProvider){
-    $.routeProvider
+    $routeProvider
         .when('/', {
             controller: 'bookCtrl',
             templateUrl: 'partials/book.html'

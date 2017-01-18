@@ -2,12 +2,11 @@ app.factory('guideFactory', function($http){
 
     return {
         guideList: () => {
-            return $http.get(`list.json`)
+            return $http.get(`data/guides.json`)
             .then(function(val){
-                console.log("list.json", val.data);
-                return val.data
+                console.log("DATA  ", val.data.guides);
+                return val.data.guides
             })
         }
     }
-
 })

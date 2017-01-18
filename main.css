@@ -1,5 +1,5 @@
 body {
-    background-color: lightblue;
+    background-color: gold;
     text-align: center;
     font-family: 'Permanent Marker', cursive;
 }
@@ -11,4 +11,12 @@ ul {
 
 h1 {
     font-size: 4em;
+}
+
+
+.card {
+    padding: 5%;
+    margin: 1%;
+    background-image: url("http://psd.fanextra.com/wp-content/uploads/2011/03/travelssite1.jpg");
+    border-radius: 2px;
 }

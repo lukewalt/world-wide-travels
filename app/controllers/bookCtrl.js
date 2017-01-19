@@ -1,21 +1,11 @@
 
 
-app.controller('bookCtrl', function($scope, $http){
-    $http.get(`data/guides.json`)
-    .then(function(json){
-        console.log(json.data.guides);
-        $scope.list = json.data.guides
-
-
-        // $scope.list = Object.keys(array)
+// guideFactory is injected so this controller can gain access to the returned obj from factory
+app.controller('bookCtrl', function($scope, guideFactory){
+    console.log('bookCtrl');
+    guideFactory.guideList()
+    .then((val) => {
+        $scope.list = val;
     })
+
 })
-
-
-// Directives:
-// ng-app="<your module name>"
-// ng-controller="bookCtrl"
-// ng-repeat="book in books"
-// A call to the data folder for guides.json using $http
-// Use the $q service to wrap your http call in a promise
-// $scope.books = <your array of guide books data>
